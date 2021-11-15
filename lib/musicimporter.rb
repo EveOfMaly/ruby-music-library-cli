@@ -3,10 +3,10 @@ class MusicImporter
 
     attr_accessor :path
 
-    @@files = []
 
-    def initialize(file_path = "./db/mp3s")
-        @path =  file_path
+
+    def initialize(path)
+        @path =  path
     end
 
 
@@ -15,6 +15,8 @@ class MusicImporter
     end
 
     def files
+        @@files = []
+
         Dir.each_child(@path) do |file|
             if file.include?(".mp3")
                 @@files << file 
