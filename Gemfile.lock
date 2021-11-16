@@ -95,6 +95,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  colorize
   learn-co
   pry
   require_all (~> 1.0)
